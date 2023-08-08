@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title"></title>
+    
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+    
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p>Report generated on 03-Aug-2023 at 11:41:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.0.0rc4</p>
+    <h2>Environment</h2>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_a">
+      <a target="_blank"></a>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr>
+          <td class="col-result"></td>
+          <td class="col-name"></td>
+          <td class="col-duration"></td>
+          <td class="col-links"></td>
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="log"></div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <template id="template_results-table__head">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </template>
+    <template id="template_results-table__head--empty">
+      <tr id="not-found-message">
+        <th colspan="4">No results found. Check the filters.</th>
+      </tr>
+    </template>
+    <template id="template_table-colgroup">
+      <colgroup>
+        <col span="1" style="width: 25%;">
+        <col span="1" style="width: 25%;">
+        <col span="1" style="width: 25%;">
+        <col span="1" style="width: 25%;">
+      </colgroup>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        
+        <p class="run-count"></p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to ge the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+          <div class="controls">
+            <div class="filters">
+              <input checked="true" class="filter" data-test-result="failed" name="filter_checkbox" type="checkbox"/><span class="failed"></span>
+              <input checked="true" class="filter" data-test-result="passed" name="filter_checkbox" type="checkbox"/><span class="passed"></span>
+              <input checked="true" class="filter" data-test-result="skipped" name="filter_checkbox" type="checkbox"/><span class="skipped"></span>
+              <input checked="true" class="filter" data-test-result="xfailed" name="filter_checkbox" type="checkbox"/><span class="xfailed"></span>
+              <input checked="true" class="filter" data-test-result="xpassed" name="filter_checkbox" type="checkbox"/><span class="xpassed"></span>
+              <input checked="true" class="filter" data-test-result="error" name="filter_checkbox" type="checkbox"/><span class="error"></span>
+              <input checked="true" class="filter" data-test-result="rerun" name="filter_checkbox" type="checkbox"/><span class="rerun"></span>
+            </div>
+            <div class="collapse">
+              <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+            <div>
+          </div>
+        </div>
+      </div>
+    
+    
+
+    <table id="results-table"></table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;title&#34;: &#34;Automation Testing Test Report&#34;, &#34;collectedItems&#34;: 36, &#34;runningState&#34;: &#34;Finished&#34;, &#34;environment&#34;: {&#34;Project_Name&#34;: &#34;ServiceNow -- Allocation Engine&#34;, &#34;Module_Name&#34;: &#34;Login Page&#34;, &#34;Tester&#34;: &#34;Sai Subramaniam&#34;}, &#34;tests&#34;: {&#34;testCases/test_role.py::Test_01_rol::test_id_001&#34;: [{&#34;duration&#34;: 31.11674349999521, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_001&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:31 *****Test_01_Settings*****\nINFO     root:test_role.py:32 *****Execution Started for test_id_001*****\nINFO     root:test_role.py:45 *****test_id_001 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_002&#34;: [{&#34;duration&#34;: 13.667978600016795, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_002&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:53 *****Execution Started for test_id_002*****\nINFO     root:test_role.py:67 *****test_id_002 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_003&#34;: [{&#34;duration&#34;: 18.95419399999082, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_003&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:75 *****Execution Started for test_id_003*****\nINFO     root:test_role.py:91 *****test_id_003 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_004&#34;: [{&#34;duration&#34;: 13.295051700028125, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_004&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:99 *****Execution Started for test_id_004*****\nINFO     root:test_role.py:114 *****test_id_004 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_005&#34;: [{&#34;duration&#34;: 14.27417940000305, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_005&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:122 *****Execution Started for test_id_005*****\nINFO     root:test_role.py:138 *****test_id_005 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_006&#34;: [{&#34;duration&#34;: 18.1781706000329, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_006&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:146 *****Execution Started for test_id_006*****\nINFO     root:test_role.py:164 *****test_id_006 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_007&#34;: [{&#34;duration&#34;: 16.984491600014735, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_007&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:172 *****Execution Started for test_id_006*****\nINFO     root:test_role.py:190 *****test_id_007 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_008&#34;: [{&#34;duration&#34;: 34.55099660000997, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_008&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:198 *****Execution Started for test_id_008*****\nINFO     root:test_role.py:220 *****test_id_008 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_009&#34;: [{&#34;duration&#34;: 16.668493399978615, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_009&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:228 *****Execution Started for test_id_009*****\nINFO     root:test_role.py:251 *****test_id_009 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_010&#34;: [{&#34;duration&#34;: 14.209529599989764, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_010&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:259 *****Execution Started for test_id_010*****\nINFO     root:test_role.py:274 *****test_id_010 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_011&#34;: [{&#34;duration&#34;: 22.655738000001293, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_011&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:282 *****Execution Started for test_id_011*****\nINFO     root:test_role.py:303 *****test_id_011 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_012&#34;: [{&#34;duration&#34;: 45.238699899986386, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_012&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:311 *****Execution Started for test_id_012*****\nINFO     root:test_role.py:338 *****test_id_012 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_013&#34;: [{&#34;duration&#34;: 15.235173600027338, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_013&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:346 *****Execution Started for test_id_013*****\nINFO     root:test_role.py:362 *****test_id_013 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_014&#34;: [{&#34;duration&#34;: 21.030106400023215, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_014&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:370 *****Execution Started for test_id_014*****\nINFO     root:test_role.py:391 *****test_id_014 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_015&#34;: [{&#34;duration&#34;: 15.088722400018014, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_015&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E27790&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;7184fc79f1e7c0a9325712e534229fb0\&#34;)&amp;gt;\n\n    def test_id_015(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_015*****\&#34;)\n        self.driver = test_setup\n        self.driver.implicitly_wait(50)\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.amusername)\n        self.lp.Setpassword(self.ampassword)\n        self.lp.clicklogin()\n        alloca = self.driver.find_element(By.XPATH, \&#34;(//li[@data-toggle=&#39;tooltip&#39;])[3]\&#34;)\n        if alloca.is_enabled():\n            self.driver.save_screenshot(\&#34;.\\\\Screenshots\\\\\&#34; + \&#34;test_id_015.png\&#34;)\n            self.driver.close()\n            self.logger.error(\&#34;*****test_id_015 Failed*****\&#34;)\n&amp;gt;           assert False\nE           assert False\n\ntestCases\\test_role.py:413: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:399 *****Execution Started for test_id_015*****\nERROR    root:test_role.py:412 *****test_id_015 Failed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_016&#34;: [{&#34;duration&#34;: 67.02239769999869, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_016&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E1FFD0&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;16a1da18326a4ead339bbb293ccd17c4\&#34;)&amp;gt;\n\n    def test_id_016(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_016*****\&#34;)\n        self.driver = test_setup\n        self.driver.implicitly_wait(50)\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.amusername)\n        self.lp.Setpassword(self.ampassword)\n        self.lp.clicklogin()\n        # self.rp.get_alloca()\n&amp;gt;       fil_alloc = self.driver.find_element(By.XPATH, \&#34;(//button[@type=&#39;button&#39;])[1]\&#34;)\n\ntestCases\\test_role.py:430: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:740: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\&#34;using\&#34;: by, \&#34;value\&#34;: value})[\&#34;value\&#34;]\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001B798E29850&amp;gt;\nresponse = {&#39;status&#39;: 404, &#39;value&#39;: &#39;{\&#34;value\&#34;:{\&#34;error\&#34;:\&#34;no such element\&#34;,\&#34;message\&#34;:\&#34;no such element: Unable to locate element: {\\...dInitThunk [0x75D47D59+25]\\\\n\\\\tRtlInitializeExceptionChain [0x77DDB79B+107]\\\\n\\\\tRtlClearBits [0x77DDB71F+191]\\\\n\&#34;}}&#39;}\n\n    def check_response(self, response: Dict[str, Any]) -&amp;gt; None:\n        \&#34;\&#34;\&#34;Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \&#34;\&#34;\&#34;\n        status = response.get(\&#34;status\&#34;, None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\&#34;message\&#34;, \&#34;\&#34;)\n        screen: str = response.get(\&#34;screen\&#34;, \&#34;\&#34;)\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\&#34;value\&#34;, None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\&#34;value\&#34;]\n                    status = value.get(\&#34;error\&#34;, None)\n                    if not status:\n                        status = value.get(\&#34;status\&#34;, ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\&#34;value\&#34;) or value.get(\&#34;message\&#34;)\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\&#34;message\&#34;)\n                    else:\n                        message = value.get(\&#34;message\&#34;, None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:\n            exception_class = NoSuchShadowRootException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif (\n            status in ErrorCode.INVALID_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER\n        ):\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if not value:\n            value = response[\&#34;value\&#34;]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \&#34;\&#34; and \&#34;message\&#34; in value:\n            message = value[\&#34;message\&#34;]\n    \n        screen = None  # type: ignore[assignment]\n        if \&#34;screen\&#34; in value:\n            screen = value[\&#34;screen\&#34;]\n    \n        stacktrace = None\n        st_value = value.get(\&#34;stackTrace\&#34;) or value.get(\&#34;stacktrace\&#34;)\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\&#34;\\n\&#34;)\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\&#34;lineNumber\&#34;, \&#34;\&#34;)\n                        file = frame.get(\&#34;fileName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if line:\n                            file = f\&#34;{file}:{line}\&#34;\n                        meth = frame.get(\&#34;methodName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if \&#34;className\&#34; in frame:\n                            meth = f\&#34;{frame[&#39;className&#39;]}.{meth}\&#34;\n                        msg = \&#34;    at %s (%s)\&#34;\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \&#34;data\&#34; in value:\n                alert_text = value[\&#34;data\&#34;].get(\&#34;text\&#34;)\n            elif \&#34;alert\&#34; in value:\n                alert_text = value[\&#34;alert\&#34;].get(\&#34;text\&#34;)\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n&amp;gt;       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\&#34;method\&#34;:\&#34;xpath\&#34;,\&#34;selector\&#34;:\&#34;(//button[@type=&#39;button&#39;])[1]\&#34;}\nE         (Session info: chrome=115.0.5790.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nE       Stacktrace:\nE       Backtrace:\nE       \tGetHandleVerifier [0x006DA813+48355]\nE       \t(No symbol) [0x0066C4B1]\nE       \t(No symbol) [0x00575358]\nE       \t(No symbol) [0x005A09A5]\nE       \t(No symbol) [0x005A0B3B]\nE       \t(No symbol) [0x005CE232]\nE       \t(No symbol) [0x005BA784]\nE       \t(No symbol) [0x005CC922]\nE       \t(No symbol) [0x005BA536]\nE       \t(No symbol) [0x005982DC]\nE       \t(No symbol) [0x005993DD]\nE       \tGetHandleVerifier [0x0093AABD+2539405]\nE       \tGetHandleVerifier [0x0097A78F+2800735]\nE       \tGetHandleVerifier [0x0097456C+2775612]\nE       \tGetHandleVerifier [0x007651E0+616112]\nE       \t(No symbol) [0x00675F8C]\nE       \t(No symbol) [0x00672328]\nE       \t(No symbol) [0x0067240B]\nE       \t(No symbol) [0x00664FF7]\nE       \tBaseThreadInitThunk [0x75D47D59+25]\nE       \tRtlInitializeExceptionChain [0x77DDB79B+107]\nE       \tRtlClearBits [0x77DDB71F+191]\n\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:245: NoSuchElementException\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:420 *****Execution Started for test_id_016*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_0017&#34;: [{&#34;duration&#34;: 26.005262600025162, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_0017&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:453 *****Execution Started for test_id_017*****\nINFO     root:test_role.py:474 *****test_id_017 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_0018&#34;: [{&#34;duration&#34;: 67.35879899997963, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_0018&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E299D0&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;af574597368063c18466a929981ec51a\&#34;)&amp;gt;\n\n    def test_id_0018(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_018*****\&#34;)\n        self.driver = test_setup\n        self.driver.implicitly_wait(50)\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.amusername)\n        self.lp.Setpassword(self.ampassword)\n        self.lp.clicklogin()\n&amp;gt;       down_alloc = self.driver.find_element(By.XPATH, \&#34;(//button[@type=&#39;button&#39;])[2]\&#34;)\n\ntestCases\\test_role.py:492: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:740: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\&#34;using\&#34;: by, \&#34;value\&#34;: value})[\&#34;value\&#34;]\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001B7995E0F90&amp;gt;\nresponse = {&#39;status&#39;: 404, &#39;value&#39;: &#39;{\&#34;value\&#34;:{\&#34;error\&#34;:\&#34;no such element\&#34;,\&#34;message\&#34;:\&#34;no such element: Unable to locate element: {\\...dInitThunk [0x75D47D59+25]\\\\n\\\\tRtlInitializeExceptionChain [0x77DDB79B+107]\\\\n\\\\tRtlClearBits [0x77DDB71F+191]\\\\n\&#34;}}&#39;}\n\n    def check_response(self, response: Dict[str, Any]) -&amp;gt; None:\n        \&#34;\&#34;\&#34;Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \&#34;\&#34;\&#34;\n        status = response.get(\&#34;status\&#34;, None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\&#34;message\&#34;, \&#34;\&#34;)\n        screen: str = response.get(\&#34;screen\&#34;, \&#34;\&#34;)\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\&#34;value\&#34;, None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\&#34;value\&#34;]\n                    status = value.get(\&#34;error\&#34;, None)\n                    if not status:\n                        status = value.get(\&#34;status\&#34;, ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\&#34;value\&#34;) or value.get(\&#34;message\&#34;)\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\&#34;message\&#34;)\n                    else:\n                        message = value.get(\&#34;message\&#34;, None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:\n            exception_class = NoSuchShadowRootException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif (\n            status in ErrorCode.INVALID_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER\n        ):\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if not value:\n            value = response[\&#34;value\&#34;]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \&#34;\&#34; and \&#34;message\&#34; in value:\n            message = value[\&#34;message\&#34;]\n    \n        screen = None  # type: ignore[assignment]\n        if \&#34;screen\&#34; in value:\n            screen = value[\&#34;screen\&#34;]\n    \n        stacktrace = None\n        st_value = value.get(\&#34;stackTrace\&#34;) or value.get(\&#34;stacktrace\&#34;)\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\&#34;\\n\&#34;)\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\&#34;lineNumber\&#34;, \&#34;\&#34;)\n                        file = frame.get(\&#34;fileName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if line:\n                            file = f\&#34;{file}:{line}\&#34;\n                        meth = frame.get(\&#34;methodName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if \&#34;className\&#34; in frame:\n                            meth = f\&#34;{frame[&#39;className&#39;]}.{meth}\&#34;\n                        msg = \&#34;    at %s (%s)\&#34;\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \&#34;data\&#34; in value:\n                alert_text = value[\&#34;data\&#34;].get(\&#34;text\&#34;)\n            elif \&#34;alert\&#34; in value:\n                alert_text = value[\&#34;alert\&#34;].get(\&#34;text\&#34;)\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n&amp;gt;       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\&#34;method\&#34;:\&#34;xpath\&#34;,\&#34;selector\&#34;:\&#34;(//button[@type=&#39;button&#39;])[2]\&#34;}\nE         (Session info: chrome=115.0.5790.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nE       Stacktrace:\nE       Backtrace:\nE       \tGetHandleVerifier [0x006DA813+48355]\nE       \t(No symbol) [0x0066C4B1]\nE       \t(No symbol) [0x00575358]\nE       \t(No symbol) [0x005A09A5]\nE       \t(No symbol) [0x005A0B3B]\nE       \t(No symbol) [0x005CE232]\nE       \t(No symbol) [0x005BA784]\nE       \t(No symbol) [0x005CC922]\nE       \t(No symbol) [0x005BA536]\nE       \t(No symbol) [0x005982DC]\nE       \t(No symbol) [0x005993DD]\nE       \tGetHandleVerifier [0x0093AABD+2539405]\nE       \tGetHandleVerifier [0x0097A78F+2800735]\nE       \tGetHandleVerifier [0x0097456C+2775612]\nE       \tGetHandleVerifier [0x007651E0+616112]\nE       \t(No symbol) [0x00675F8C]\nE       \t(No symbol) [0x00672328]\nE       \t(No symbol) [0x0067240B]\nE       \t(No symbol) [0x00664FF7]\nE       \tBaseThreadInitThunk [0x75D47D59+25]\nE       \tRtlInitializeExceptionChain [0x77DDB79B+107]\nE       \tRtlClearBits [0x77DDB71F+191]\n\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:245: NoSuchElementException\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:483 *****Execution Started for test_id_018*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_019&#34;: [{&#34;duration&#34;: 47.95070560002932, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_019&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E29D10&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;6371edf31b673f7b879bda5cfb806568\&#34;)&amp;gt;\n\n    def test_id_019(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_019*****\&#34;)\n        self.driver = test_setup\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.username)\n        self.lp.Setpassword(self.password)\n        self.lp.clicklogin()\n        self.rp.click_settings()\n        self.rp.User_mang()\n        self.rp.role_config()\n        down_val = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[1]\&#34;).click()\n        option = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;No Access&#39;)])[1]\&#34;).click()\n        time.sleep(10)\n        down_val1 = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[2]\&#34;).click()\n        option_1 = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;ReadOnly&#39;)])[2]\&#34;).click()\n        wait = WebDriverWait(self.driver, 10)\n        toast = (By.XPATH, \&#34;//*[@id=&#39;snackbarrr&#39;]\&#34;)\n&amp;gt;       toast_element = wait.until(EC.visibility_of_element_located(toast))\n\ntestCases\\test_role.py:523: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;selenium.webdriver.support.wait.WebDriverWait (session=\&#34;6371edf31b673f7b879bda5cfb806568\&#34;)&amp;gt;\nmethod = &amp;lt;function visibility_of_element_located.&amp;lt;locals&amp;gt;._predicate at 0x000001B798E90400&amp;gt;, message = &#39;&#39;\n\n    def until(self, method, message: str = \&#34;\&#34;):\n        \&#34;\&#34;\&#34;Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \&#34;\&#34;\&#34;\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \&#34;screen\&#34;, None)\n                stacktrace = getattr(exc, \&#34;stacktrace\&#34;, None)\n            time.sleep(self._poll)\n            if time.monotonic() &amp;gt; end_time:\n                break\n&amp;gt;       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\nvenv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:95: TimeoutException\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:505 *****Execution Started for test_id_019*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_020&#34;: [{&#34;duration&#34;: 30.85115100000985, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_020&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:539 *****Execution Started for test_id_020*****\nINFO     root:test_role.py:555 *****test_id_020 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_021&#34;: [{&#34;duration&#34;: 41.12853059999179, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_021&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E2A690&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;2f17d838c39b7d572f6f69862226d152\&#34;)&amp;gt;\n\n    def test_id_021(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_021*****\&#34;)\n        self.driver = test_setup\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.username)\n        self.lp.Setpassword(self.password)\n        self.lp.clicklogin()\n        self.rp.click_settings()\n        self.rp.User_mang()\n        self.rp.role_config()\n        down_val = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[2]\&#34;).click()\n        option = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;Writable&#39;)])[2]\&#34;).click()\n        wait = WebDriverWait(self.driver, 10)\n        toast = (By.XPATH, \&#34;//div[@id=&#39;snackbarrr&#39;]\&#34;)\n&amp;gt;       toast_element = wait.until(EC.visibility_of_element_located(toast))\n\ntestCases\\test_role.py:579: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;selenium.webdriver.support.wait.WebDriverWait (session=\&#34;2f17d838c39b7d572f6f69862226d152\&#34;)&amp;gt;\nmethod = &amp;lt;function visibility_of_element_located.&amp;lt;locals&amp;gt;._predicate at 0x000001B798E4DD00&amp;gt;, message = &#39;&#39;\n\n    def until(self, method, message: str = \&#34;\&#34;):\n        \&#34;\&#34;\&#34;Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \&#34;\&#34;\&#34;\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \&#34;screen\&#34;, None)\n                stacktrace = getattr(exc, \&#34;stacktrace\&#34;, None)\n            time.sleep(self._poll)\n            if time.monotonic() &amp;gt; end_time:\n                break\n&amp;gt;       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\nvenv\\Lib\\site-packages\\selenium\\webdriver\\support\\wait.py:95: TimeoutException\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:564 *****Execution Started for test_id_021*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_022&#34;: [{&#34;duration&#34;: 14.170968199963681, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_022&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:594 *****Execution Started for test_id_022*****\nINFO     root:test_role.py:610 *****test_id_022 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_023&#34;: [{&#34;duration&#34;: 37.67131760000484, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_023&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:619 *****Execution Started for test_id_023*****\nINFO     root:test_role.py:643 *****test_id_023 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_024&#34;: [{&#34;duration&#34;: 15.53077889996348, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_024&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:652 *****Execution Started for test_id_024*****\nINFO     root:test_role.py:672 *****test_id_024 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_025&#34;: [{&#34;duration&#34;: 22.306749899988063, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_025&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:676 *****Execution Started for test_id_025*****\nINFO     root:test_role.py:698 *****test_id_025 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_026&#34;: [{&#34;duration&#34;: 14.131158300035167, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_026&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:707 *****Execution Started for test_id_026*****\nINFO     root:test_role.py:721 *****test_id_026 Passed*****\nINFO     root:test_role.py:724 *****test_id_026 Passed*****\nINFO     root:test_role.py:728 *****test_id_026 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_027&#34;: [{&#34;duration&#34;: 30.514145499968436, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_027&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E30F90&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;89eda5e296d47e45a79f417201b550c4\&#34;)&amp;gt;\n\n    def test_id_027(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_027*****\&#34;)\n        self.driver = test_setup\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.username)\n        self.lp.Setpassword(self.password)\n        self.lp.clicklogin()\n        self.rp.click_settings()\n        self.rp.User_mang()\n        self.rp.role_config()\n        down_val1 = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[3]\&#34;).click()\n        option1 = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;No Access&#39;)])[3]\&#34;).click()\n        time.sleep(10)\n        down_val = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[4]\&#34;).click()\n        option = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;ReadOnly&#39;)])[4]\&#34;).click()\n        wait = WebDriverWait(self.driver, 10)\n        toast = (By.XPATH, \&#34;//*[@id=&#39;snackbarrr&#39;]\&#34;)\n        toast_element = wait.until(EC.visibility_of_element_located(toast))\n        actl_msg = toast_element.text\n        exp_msg = \&#34;Custom SKU is changed to ReadOnly\&#34;\n        if exp_msg == actl_msg:\n            assert True\n            self.driver.close()\n            self.logger.info(\&#34;*****test_id_027 Passed*****\&#34;)\n        else:\n            self.driver.save_screenshot(\&#34;.\\\\Screenshots\\\\\&#34; + \&#34;test_id_027.png\&#34;)\n            self.driver.close()\n            self.logger.error(\&#34;*****test_id_027 Failed*****\&#34;)\n&amp;gt;           assert False\nE           assert False\n\ntestCases\\test_role.py:766: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:737 *****Execution Started for test_id_027*****\nERROR    root:test_role.py:765 *****test_id_027 Failed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_028&#34;: [{&#34;duration&#34;: 17.988824800006114, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_028&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:770 *****Execution Started for test_id_028*****\nINFO     root:test_role.py:789 *****test_id_028 Passed*****\nINFO     root:test_role.py:797 *****test_id_028 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_029&#34;: [{&#34;duration&#34;: 19.932294600002933, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_029&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:806 *****Execution Started for test_id_029*****\nINFO     root:test_role.py:827 *****test_id_028 Passed*****\nINFO     root:test_role.py:835 *****test_id_029 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_030&#34;: [{&#34;duration&#34;: 27.300223400001414, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_030&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E324D0&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;494b06370e4caa3b37c71a9deb7704a5\&#34;)&amp;gt;\n\n    def test_id_030(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_030*****\&#34;)\n        self.driver = test_setup\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.username)\n        self.lp.Setpassword(self.password)\n        self.lp.clicklogin()\n        self.rp.click_settings()\n        self.rp.User_mang()\n        self.rp.role_config()\n        self.driver.implicitly_wait(15)\n        down_val = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[4]\&#34;).click()\n        option = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;Writable&#39;)])[4]\&#34;).click()\n        wait = WebDriverWait(self.driver, 10)\n        toast = (By.XPATH, \&#34;//div[@id=&#39;snackbarrr&#39;]\&#34;)\n        toast_element = wait.until(EC.visibility_of_element_located(toast))\n        actl_msg = toast_element.text\n        exp_msg = \&#34;Custom SKU is changed to Writable\&#34;\n        if actl_msg == exp_msg:\n            assert True\n            self.driver.close()\n            self.logger.info(\&#34;*****test_id_030 Passed*****\&#34;)\n        else:\n            self.driver.save_screenshot(\&#34;.\\\\Screenshots\\\\\&#34; + \&#34;test_id_030.png\&#34;)\n            self.driver.close()\n            self.logger.error(\&#34;*****test_id_030 Failed*****\&#34;)\n&amp;gt;           assert False\nE           assert False\n\ntestCases\\test_role.py:871: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:844 *****Execution Started for test_id_030*****\nERROR    root:test_role.py:870 *****test_id_030 Failed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_031&#34;: [{&#34;duration&#34;: 18.990448800032027, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_031&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:875 *****Execution Started for test_id_031*****\nINFO     root:test_role.py:894 *****test_id_031 Passed*****\nINFO     root:test_role.py:898 *****test_id_031 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_032&#34;: [{&#34;duration&#34;: 21.39725549996365, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_032&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E333D0&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;078fb402b3baf01d3e823f3b60347380\&#34;)&amp;gt;\n\n    def test_id_032(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_032*****\&#34;)\n        self.driver = test_setup\n        self.driver.implicitly_wait(50)\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.amusername)\n        self.lp.Setpassword(self.ampassword)\n        self.lp.clicklogin()\n        time.sleep(8)\n        mega_custom_nav = self.driver.find_element(By.XPATH, \&#34;(//li[@data-toggle=&#39;tooltip&#39;])[7]\&#34;)\n        Action_required = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-PendingAllocations-tab&#39;]\&#34;)\n        completed_tab = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-Allocations-tab&#39;]\&#34;)\n        colm_sel = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;filtercler&#39;]\&#34;)\n        colm_pref = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;btnPreference&#39;]\&#34;)\n        temp_down = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;TemplateDownload&#39;]\&#34;)\n        download = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;download&#39;]\&#34;)\n        upload = self.driver.find_element(By.XPATH, \&#34;(//*[@id=&#39;DataUpload&#39;])[1]\&#34;)\n        completed_tab.click()\n&amp;gt;       if colm_pref.is_enabled() and colm_sel.is_enabled() and temp_down.is_enabled() and download.is_enabled() and upload.is_enabled():\n\ntestCases\\test_role.py:931: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:192: in is_enabled\n    return self._execute(Command.IS_ELEMENT_ENABLED)[\&#34;value\&#34;]\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webelement.py:395: in _execute\n    return self._parent.execute(command, params)\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:346: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001B79966D9D0&amp;gt;\nresponse = {&#39;status&#39;: 404, &#39;value&#39;: &#39;{\&#34;value\&#34;:{\&#34;error\&#34;:\&#34;stale element reference\&#34;,\&#34;message\&#34;:\&#34;stale element reference: stale elemen...dInitThunk [0x75D47D59+25]\\\\n\\\\tRtlInitializeExceptionChain [0x77DDB79B+107]\\\\n\\\\tRtlClearBits [0x77DDB71F+191]\\\\n\&#34;}}&#39;}\n\n    def check_response(self, response: Dict[str, Any]) -&amp;gt; None:\n        \&#34;\&#34;\&#34;Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \&#34;\&#34;\&#34;\n        status = response.get(\&#34;status\&#34;, None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\&#34;message\&#34;, \&#34;\&#34;)\n        screen: str = response.get(\&#34;screen\&#34;, \&#34;\&#34;)\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\&#34;value\&#34;, None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\&#34;value\&#34;]\n                    status = value.get(\&#34;error\&#34;, None)\n                    if not status:\n                        status = value.get(\&#34;status\&#34;, ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\&#34;value\&#34;) or value.get(\&#34;message\&#34;)\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\&#34;message\&#34;)\n                    else:\n                        message = value.get(\&#34;message\&#34;, None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        if status in ErrorCode.NO_SUCH_ELEMENT:\n            exception_class = NoSuchElementException\n        elif status in ErrorCode.NO_SUCH_FRAME:\n            exception_class = NoSuchFrameException\n        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:\n            exception_class = NoSuchShadowRootException\n        elif status in ErrorCode.NO_SUCH_WINDOW:\n            exception_class = NoSuchWindowException\n        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:\n            exception_class = StaleElementReferenceException\n        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:\n            exception_class = ElementNotVisibleException\n        elif status in ErrorCode.INVALID_ELEMENT_STATE:\n            exception_class = InvalidElementStateException\n        elif (\n            status in ErrorCode.INVALID_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR\n            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER\n        ):\n            exception_class = InvalidSelectorException\n        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:\n            exception_class = ElementNotSelectableException\n        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:\n            exception_class = ElementNotInteractableException\n        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:\n            exception_class = InvalidCookieDomainException\n        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:\n            exception_class = UnableToSetCookieException\n        elif status in ErrorCode.TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.SCRIPT_TIMEOUT:\n            exception_class = TimeoutException\n        elif status in ErrorCode.UNKNOWN_ERROR:\n            exception_class = WebDriverException\n        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:\n            exception_class = UnexpectedAlertPresentException\n        elif status in ErrorCode.NO_ALERT_OPEN:\n            exception_class = NoAlertPresentException\n        elif status in ErrorCode.IME_NOT_AVAILABLE:\n            exception_class = ImeNotAvailableException\n        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:\n            exception_class = ImeActivationFailedException\n        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:\n            exception_class = MoveTargetOutOfBoundsException\n        elif status in ErrorCode.JAVASCRIPT_ERROR:\n            exception_class = JavascriptException\n        elif status in ErrorCode.SESSION_NOT_CREATED:\n            exception_class = SessionNotCreatedException\n        elif status in ErrorCode.INVALID_ARGUMENT:\n            exception_class = InvalidArgumentException\n        elif status in ErrorCode.NO_SUCH_COOKIE:\n            exception_class = NoSuchCookieException\n        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:\n            exception_class = ScreenshotException\n        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:\n            exception_class = ElementClickInterceptedException\n        elif status in ErrorCode.INSECURE_CERTIFICATE:\n            exception_class = InsecureCertificateException\n        elif status in ErrorCode.INVALID_COORDINATES:\n            exception_class = InvalidCoordinatesException\n        elif status in ErrorCode.INVALID_SESSION_ID:\n            exception_class = InvalidSessionIdException\n        elif status in ErrorCode.UNKNOWN_METHOD:\n            exception_class = UnknownMethodException\n        else:\n            exception_class = WebDriverException\n        if not value:\n            value = response[\&#34;value\&#34;]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \&#34;\&#34; and \&#34;message\&#34; in value:\n            message = value[\&#34;message\&#34;]\n    \n        screen = None  # type: ignore[assignment]\n        if \&#34;screen\&#34; in value:\n            screen = value[\&#34;screen\&#34;]\n    \n        stacktrace = None\n        st_value = value.get(\&#34;stackTrace\&#34;) or value.get(\&#34;stacktrace\&#34;)\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\&#34;\\n\&#34;)\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\&#34;lineNumber\&#34;, \&#34;\&#34;)\n                        file = frame.get(\&#34;fileName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if line:\n                            file = f\&#34;{file}:{line}\&#34;\n                        meth = frame.get(\&#34;methodName\&#34;, \&#34;&amp;lt;anonymous&amp;gt;\&#34;)\n                        if \&#34;className\&#34; in frame:\n                            meth = f\&#34;{frame[&#39;className&#39;]}.{meth}\&#34;\n                        msg = \&#34;    at %s (%s)\&#34;\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \&#34;data\&#34; in value:\n                alert_text = value[\&#34;data\&#34;].get(\&#34;text\&#34;)\n            elif \&#34;alert\&#34; in value:\n                alert_text = value[\&#34;alert\&#34;].get(\&#34;text\&#34;)\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n&amp;gt;       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found\nE         (Session info: chrome=115.0.5790.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception\nE       Stacktrace:\nE       Backtrace:\nE       \tGetHandleVerifier [0x006DA813+48355]\nE       \t(No symbol) [0x0066C4B1]\nE       \t(No symbol) [0x00575358]\nE       \t(No symbol) [0x005787A1]\nE       \t(No symbol) [0x005799E1]\nE       \t(No symbol) [0x00579A80]\nE       \t(No symbol) [0x0059D6E6]\nE       \t(No symbol) [0x005BA73C]\nE       \t(No symbol) [0x00599A36]\nE       \t(No symbol) [0x005BAA94]\nE       \t(No symbol) [0x005CC922]\nE       \t(No symbol) [0x005BA536]\nE       \t(No symbol) [0x005982DC]\nE       \t(No symbol) [0x005993DD]\nE       \tGetHandleVerifier [0x0093AABD+2539405]\nE       \tGetHandleVerifier [0x0097A78F+2800735]\nE       \tGetHandleVerifier [0x0097456C+2775612]\nE       \tGetHandleVerifier [0x007651E0+616112]\nE       \t(No symbol) [0x00675F8C]\nE       \t(No symbol) [0x00672328]\nE       \t(No symbol) [0x0067240B]\nE       \t(No symbol) [0x00664FF7]\nE       \tBaseThreadInitThunk [0x75D47D59+25]\nE       \tRtlInitializeExceptionChain [0x77DDB79B+107]\nE       \tRtlClearBits [0x77DDB71F+191]\n\nvenv\\Lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:245: StaleElementReferenceException\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:912 *****Execution Started for test_id_032*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_033&#34;: [{&#34;duration&#34;: 48.3816119999974, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_033&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:943 *****Execution Started for test_id_033*****\nINFO     root:test_role.py:967 *****test_id_033 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_034&#34;: [{&#34;duration&#34;: 36.7872438999475, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_034&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:976 *****Execution Started for test_id_034*****\nINFO     root:test_role.py:996 *****test_id_034 Passed*****\nINFO     root:test_role.py:1003 *****test_id_034 Passed*****\nINFO     root:test_role.py:1019 *****test_id_034 Passed*****\nINFO     root:test_role.py:1031 *****test_id_034 Passed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_035&#34;: [{&#34;duration&#34;: 26.152808099985123, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_035&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E33E50&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;d34a4fa05024ef064dfa13cba8beb06c\&#34;)&amp;gt;\n\n    def test_id_035(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_035*****\&#34;)\n        self.driver = test_setup\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.username)\n        self.lp.Setpassword(self.password)\n        self.lp.clicklogin()\n        self.rp.click_settings()\n        self.rp.User_mang()\n        self.rp.role_config()\n        self.driver.implicitly_wait(15)\n        down_val = self.driver.find_element(By.XPATH, \&#34;(//select[@class=&#39;ctrl-status&#39;])[5]\&#34;).click()\n        option = self.driver.find_element(By.XPATH, \&#34;(//option[contains(text(), &#39;Writable&#39;)])[5]\&#34;).click()\n        wait = WebDriverWait(self.driver, 10)\n        toast = (By.XPATH, \&#34;//div[@id=&#39;snackbarrr&#39;]\&#34;)\n        toast_element = wait.until(EC.visibility_of_element_located(toast))\n        actl_msg = toast_element.text\n        exp_msg = \&#34;Dashboard SKU is changed to Writable\&#34;\n        if actl_msg == exp_msg:\n            assert True\n            self.driver.close()\n            self.logger.info(\&#34;*****test_id_035 Passed*****\&#34;)\n        else:\n            self.driver.save_screenshot(\&#34;.\\\\Screenshots\\\\\&#34; + \&#34;test_id_035.png\&#34;)\n            self.driver.close()\n            self.logger.error(\&#34;*****test_id_035 Failed*****\&#34;)\n&amp;gt;           assert False\nE           assert False\n\ntestCases\\test_role.py:1062: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:1035 *****Execution Started for test_id_035*****\nERROR    root:test_role.py:1061 *****test_id_035 Failed*****\n\n&#34;}], &#34;testCases/test_role.py::Test_01_rol::test_id_036&#34;: [{&#34;duration&#34;: 24.381052599987015, &#34;testId&#34;: &#34;testCases/test_role.py::Test_01_rol::test_id_036&#34;, &#34;resultsTableRow&#34;: {}, &#34;tableHtml&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;extras&#34;: [], &#34;log&#34;: &#34;self = &amp;lt;testCases.test_role.Test_01_rol object at 0x000001B798E33050&amp;gt;\ntest_setup = &amp;lt;selenium.webdriver.chrome.webdriver.WebDriver (session=\&#34;c1a3a80811521fc027d73f46bb3170c1\&#34;)&amp;gt;\n\n    def test_id_036(self, test_setup):\n        self.logger.info(\&#34;*****Execution Started for test_id_036*****\&#34;)\n        self.driver = test_setup\n        self.driver.implicitly_wait(50)\n        self.driver.get(self.baseURL)\n        self.lp = loginpage(self.driver)\n        self.rp = rolespage(self.driver)\n        self.lp.SetUsername(self.amusername)\n        self.lp.Setpassword(self.ampassword)\n        self.lp.clicklogin()\n        time.sleep(8)\n        dashboard = self.driver.find_element(By.XPATH, \&#34;(//li[@data-toggle=&#39;tooltip&#39;])[2]\&#34;)\n        current_list = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-current-tab&#39;]\&#34;)\n        pipeline_list = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-pipeline-tab&#39;]\&#34;)\n        History_list = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-history-tab&#39;]\&#34;)\n        crnt_down = self.driver.find_element(By.XPATH, \&#34;//*[@id=&#39;nav-current&#39;]/div[2]/div[1]/div[1]/button[2]\&#34;)\n        curr_view = self.driver.find_element(By.XPATH, \&#34;(//*[@id=&#39;view&#39;])[1]\&#34;)\n        scroll = self.driver.execute_script(\&#34;arguments[0].scrollIntoView();\&#34;, current_list)\n        if dashboard.is_displayed() and current_list.is_enabled() and pipeline_list.is_enabled():\n            assert True\n            self.logger.info(\&#34;*****Dash, curr, pip, test_id_036 Passed*****\&#34;)\n            if crnt_down.is_enabled() and curr_view.is_enabled():\n                assert True\n                self.logger.info(\&#34;*****Dash, curr, pip, test_id_036 Passed*****\&#34;)\n            else:\n                self.driver.save_screenshot(\&#34;.\\\\Screenshots\\\\\&#34; + \&#34;test_id_036.png\&#34;)\n                self.logger.error(\&#34;*****Dash, curr, pip, test_id_036 Failed*****\&#34;)\n&amp;gt;               assert False\nE               assert False\n\ntestCases\\test_role.py:1092: AssertionError\n\n------------------------------ Captured log call -------------------------------\nINFO     root:test_role.py:1066 *****Execution Started for test_id_036*****\nINFO     root:test_role.py:1085 *****Dash, curr, pip, test_id_036 Passed*****\nERROR    root:test_role.py:1091 *****Dash, curr, pip, test_id_036 Failed*****\n\n&#34;}]}, &#34;resultsTableHeader&#34;: {}, &#34;additionalSummary&#34;: {&#34;prefix&#34;: [], &#34;summary&#34;: [], &#34;postfix&#34;: []}, &#34;headerPops&#34;: 0}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.collapsed)]
+        const dataBlob = { ...data, tests: Object.values(data.tests).flat().map((test, index) => ({
+            ...test,
+            id: `test_${index}`,
+            collapsed: collapsedCategories.includes(test.result.toLowerCase()),
+        })) }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+    get allTests() {
+        return [...this.data.tests]
+    }
+    get title() {
+        return this.renderData.title
+    }
+    get environment() {
+        return this.renderData.environment
+    }
+    get collectedItems() {
+        return this.renderData.collectedItems
+    }
+    get isFinished() {
+        return this.data.runningState === 'Finished'
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const storageModule = require('./storage.js')
+const { formatDuration, transformTableObj } = require('./utils.js')
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.querySelector('#template_environment_row')
+const templateCollGroup = document.querySelector('#template_table-colgroup')
+const templateResult = document.querySelector('#template_results-table__tbody')
+const aTag = document.querySelector('#template_a')
+const listHeader = document.querySelector('#template_results-table__head')
+const listHeaderEmpty = document.querySelector('#template_results-table__head--empty')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const insertAdditionalHTML = (html, element, selector, position = 'beforebegin') => {
+    Object.keys(html).map((key) => {
+        element.querySelectorAll(selector).item(key).insertAdjacentHTML(position, html[key])
+    })
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getListHeader: ({ resultsTableHeader }) => {
+        const header = listHeader.content.cloneNode(true)
+        const sortAttr = storageModule.getSort()
+        const sortAsc = JSON.parse(storageModule.getSortDirection())
+
+        const regex = /data-column-type="(\w+)/
+        const cols = Object.values(resultsTableHeader).reduce((result, value) => {
+            if (value.includes("sortable")) {
+                const matches = regex.exec(value)
+                if (matches) {
+                    result.push(matches[1])
+                }
+            }
+            return result
+        }, [])
+        const sortables = ['result', 'testId', 'duration', ...cols]
+
+        // Add custom html from the pytest_html_results_table_header hook
+        const headers = transformTableObj(resultsTableHeader)
+        insertAdditionalHTML(headers.inserts, header, 'th')
+        insertAdditionalHTML(headers.appends, header, 'tr', 'beforeend')
+
+        sortables.forEach((sortCol) => {
+            if (sortCol === sortAttr) {
+                header.querySelector(`[data-column-type="${sortCol}"]`).classList.add(sortAsc ? 'desc' : 'asc')
+            }
+        })
+
+        return header
+    },
+    getListHeaderEmpty: () => listHeaderEmpty.content.cloneNode(true),
+    getColGroup: () => templateCollGroup.content.cloneNode(true),
+    getResultTBody: ({ testId, id, log, duration, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultLower = result.toLowerCase()
+        let formattedDuration = formatDuration(duration)
+        formattedDuration = formatDuration < 1 ? formattedDuration.ms : formattedDuration.formatted
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(resultLower)
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.col-result').innerText = result
+        resultBody.querySelector('.col-result').classList.add(`${collapsed ? 'expander' : 'collapser'}`)
+        resultBody.querySelector('.col-result').dataset.id = id
+        resultBody.querySelector('.col-name').innerText = testId
+
+        resultBody.querySelector('.col-duration').innerText = duration < 1 ? formatDuration(duration).ms : formatDuration(duration).formatted
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['json', 'text', 'url'].includes(format_type)) {
+                const extraLink = aTag.content.cloneNode(true)
+                const extraLinkItem = extraLink.querySelector('a')
+
+                extraLinkItem.href = content
+                extraLinkItem.className = `col-links__extra ${format_type}`
+                extraLinkItem.innerText = name
+                resultBody.querySelector('.col-links').appendChild(extraLinkItem)
+            }
+
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setUp(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_row hook
+        const rows = transformTableObj(resultsTableRow)
+        resultsTableRow && insertAdditionalHTML(rows.inserts, resultBody, 'td')
+        resultsTableRow && insertAdditionalHTML(rows.appends, resultBody, 'tr', 'beforeend')
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+exports.dom = dom
+exports.htmlToElements = htmlToElements
+exports.find = find
+exports.findAll = findAll
+
+},{"./mediaviewer.js":6,"./storage.js":8,"./utils.js":9}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+
+    if (currentFilter.length) {
+        const filteredSubset = getFilteredSubSet(currentFilter)
+        manager.setRender(filteredSubset)
+    } else {
+        manager.resetRender()
+    }
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.querySelector('#data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { formatDuration } = require('./utils.js')
+const { dom, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const { getVisible, possibleResults } = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderTitle = () => {
+        const title = manager.title
+        document.querySelector('#title').innerText = title
+        document.querySelector('#head-title').innerText = title
+    }
+    const renderTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.querySelector('#environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderTitle()
+    renderTable()
+}
+
+const renderContent = (tests) => {
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.querySelector('#results-table')
+    removeChildren(table)
+    const tableHeader = dom.getListHeader(manager.renderData)
+    if (!rows.length) {
+        tableHeader.appendChild(dom.getListHeaderEmpty())
+    }
+    table.appendChild(dom.getColGroup())
+    table.appendChild(tableHeader)
+
+    rows.forEach((row) => !!row && table.appendChild(row))
+
+    table.querySelectorAll('.extra').forEach((item) => {
+        item.colSpan = document.querySelectorAll('th').length
+    })
+
+    const { headerPops } = manager.renderData
+    if (headerPops > 0) {
+        // remove 'headerPops' number of header columns
+        findAll('#results-table-head th').splice(-headerPops).forEach(column => column.remove())
+
+        // remove 'headerPops' number of row columns
+        const resultRows = findAll('.results-table-row')
+        resultRows.forEach((elem) => {
+            findAll('td:not(.extra)', elem).splice(-headerPops).forEach(column => column.remove())
+        })
+    }
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+    findAll('.col-result').forEach((elem) => {
+        elem.addEventListener('click', ({ target }) => {
+            manager.toggleCollapsedItem(target.dataset.id)
+            redraw()
+        })
+    })
+}
+
+const renderDerived = (tests, collectedItems, isFinished) => {
+    const currentFilter = getVisible()
+    possibleResults.forEach(({ result, label }) => {
+        const count = tests.filter((test) => test.result.toLowerCase() === result).length
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        const lastInput = document.querySelector(`input[data-test-result="${result}"]:last-of-type`)
+        document.querySelector(`.${result}`).innerText = `${count} ${label}`
+        // add a comma and whitespace between the results
+        if (input !== lastInput) {
+            document.querySelector(`.${result}`).innerText += ', '
+        }
+
+        input.disabled = !count
+        input.checked = currentFilter.includes(result)
+    })
+
+    const numberOfTests = tests.filter(({ result }) =>
+        ['Passed', 'Failed', 'XPassed', 'XFailed'].includes(result)).length
+
+    if (isFinished) {
+        const accTime = tests.reduce((prev, { duration }) => prev + duration, 0)
+        const formattedAccTime = formatDuration(accTime)
+        const testWord = numberOfTests > 1 ? 'tests' : 'test'
+        const durationText = formattedAccTime.hasOwnProperty('ms') ? formattedAccTime.ms : formattedAccTime.formatted
+
+        document.querySelector('.run-count').innerText = `${numberOfTests} ${testWord} took ${durationText}.`
+        document.querySelector('.summary__reload__button').classList.add('hidden')
+    } else {
+        document.querySelector('.run-count').innerText = `${numberOfTests} / ${collectedItems} tests done`
+    }
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        redraw()
+    }
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.removeEventListener('click', filterColumn)
+        elem.addEventListener('click', filterColumn)
+    })
+    document.querySelector('#show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        redraw()
+    })
+    document.querySelector('#hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset, allTests, collectedItems, isFinished } = manager
+
+    renderStatic()
+    renderContent(testSubset)
+    renderDerived(allTests, collectedItems, isFinished)
+}
+
+exports.redraw = redraw
+exports.bindEvents = bindEvents
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8,"./utils.js":9}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setUp = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+
+    leftArrow.addEventListener('click', moveLeft)
+    rightArrow.addEventListener('click', doRight)
+    imageEl.addEventListener('click', openImg)
+}
+
+exports.setUp = setUp
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex(item => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex(item => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort()
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        const sortedList = genericSort(list, type, ascending, initialOrder)
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type) => {
+    const newSortType = storageModule.getSort() !== type
+    const currentAsc = storageModule.getSortDirection()
+    const ascending = newSortType ? true : !currentAsc
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+    const list = manager.testSubset
+
+    const sortedList = genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+exports.doSort = doSort
+exports.doInitSort = doInitSort
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleResults = [
+    { result: 'passed', label: 'Passed' },
+    { result: 'skipped', label: 'Skipped' },
+    { result: 'failed', label: 'Failed' },
+    { result: 'error', label: 'Errors' },
+    { result: 'xfailed', label: 'Unexpected failures' },
+    { result: 'xpassed', label: 'Unexpected passes' },
+    { result: 'rerun', label: 'Reruns' },
+]
+const possibleFilters = possibleResults.map((item) => item.result)
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible') || ''
+    return settings ?
+        [...new Set(settings.split(',').filter((filter) => possibleFilters.includes(filter)))] : possibleFilters
+}
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',') || [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    history.pushState({}, null, unescape(url.href))
+}
+const setFilter = (currentFilter) => {
+    if (!possibleFilters.includes(currentFilter)) {
+        return
+    }
+    const url = new URL(window.location.href)
+    const settings = [currentFilter, ...new Set(new URLSearchParams(url.search).get('filter').split(','))]
+
+    url.searchParams.set('filter', settings)
+    history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = () => {
+    const url = new URL(window.location.href)
+    return new URLSearchParams(url.search).get('sort') || 'result'
+}
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (config) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+            case !config && collapsedItems === null:
+                categories = ['passed']
+                break
+            case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+                categories = []
+                break
+            case /^all$/.test(collapsedItems) || (collapsedItems === null && /^all$/.test(config)):
+                categories = [...possibleFilters]
+                break
+            default:
+                categories = collapsedItems?.split(',').map(item => item.toLowerCase()) || config
+                break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc'))
+
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+module.exports = {
+    getVisible,
+    setFilter,
+    hideCategory,
+    showCategory,
+    getSort,
+    getSortDirection,
+    setSort,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+    possibleResults,
+}
+
+},{}],9:[function(require,module,exports){
+const formattedNumber = (number) =>
+    number.toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+    })
+
+const formatDuration = ( totalSeconds ) => {
+    if (totalSeconds < 1) {
+        return {ms: `${Math.round(totalSeconds * 1000)} ms`}
+    }
+
+    const hours = Math.floor(totalSeconds / 3600)
+    let remainingSeconds = totalSeconds % 3600
+    const minutes = Math.floor(remainingSeconds / 60)
+    remainingSeconds = remainingSeconds % 60
+    const seconds = Math.round(remainingSeconds)
+
+    return {
+      seconds: `${Math.round(totalSeconds)} seconds`,
+      formatted: `${formattedNumber(hours)}:${formattedNumber(minutes)}:${formattedNumber(seconds)}`,
+    }
+}
+
+const transformTableObj = (obj) => {
+    const appends = {}
+    const inserts = {}
+    for (const key in obj) {
+        key.startsWith("Z") ? appends[key] = obj[key] : inserts[key] = obj[key]
+    }
+    return {
+        appends,
+        inserts,
+    }
+}
+
+module.exports = {
+    formatDuration,
+    transformTableObj,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>

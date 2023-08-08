@@ -1,0 +1,22 @@
+Push the Code to Git & GitHub Repo
+---------------------------------------
+
+1. Create local git repository for our AE project
+cd C:\Users\sai.subramaniam\PycharmProjects\AllocationEngine ---- Open this folder
+
+Once the folder got open, right click on our mouse, thn click on th Git bash
+
+1. Run command as git init - To create a local repo
+
+2. git add remote origin https://github.com/saisubramani3339/Allocation-Engine.git -- Connect your local repo with remote repo
+
+---------------------------
+
+Before doing commit first time we need to execute these below commands
+
+git config --global user.name "sai.subramaniam"
+git config --global user.email "sai.subramaniam@iopex.com"
+
+3. To check the status 
+
+Need to execute a command called git status
