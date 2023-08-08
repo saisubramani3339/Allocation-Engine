@@ -1,3 +1,7 @@
+Git token -- git remote set-url https://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@github.com/saisubramani3339/Allocation-Engine
+
+
+
 Push the Code to Git & GitHub Repo
 ---------------------------------------
 
@@ -20,3 +24,13 @@ git config --global user.email "sai.subramaniam@iopex.com"
 3. To check the status 
 
 Need to execute a command called git status
+
+4. git add -A -- staging area all files will be added
+
+5. Comit the code into git repository(local repo)
+ git commit -m "this is my first commit"
+
+6. Push the code from git to github repo
+
+git push -u origin master
+
